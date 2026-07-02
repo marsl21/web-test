@@ -21,13 +21,14 @@ body {
 }
 
 .page {
-    max-width: 1480px;
+    max-width: 1380px;
     margin: 36px auto 60px auto;
-    padding: 0 24px;
+    padding: 0 30px;
 }
 
 .filterbar {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 8px;
     margin-bottom: 34px;
@@ -53,10 +54,9 @@ body {
 }
 
 .search-box {
-    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    margin-top: 8px;
+    justify-content: center;
+    margin-bottom: 28px;
 }
 
 .search-wrapper {
@@ -381,20 +381,7 @@ body {
 
 <div class="page">
 
-    <div class="filterbar">
-        <button class="filter-btn active" onclick="filterGroup('all', this)">Alle</button>
-        <button class='filter-btn' onclick="filterGroup('Eiswürfelmaschine', this)">Eisw&#252;rfelmaschine</button>
-<button class='filter-btn' onclick="filterGroup('Foodcenter', this)">Foodcenter</button>
-<button class='filter-btn' onclick="filterGroup('Gefrierschrank', this)">Gefrierschrank</button>
-<button class='filter-btn' onclick="filterGroup('Gefriertruhe', this)">Gefriertruhe</button>
-<button class='filter-btn' onclick="filterGroup('Getränkekühlschrank', this)">Getr&#228;nkek&#252;hlschrank</button>
-<button class='filter-btn' onclick="filterGroup('Kühl- Gefrierkombi', this)">K&#252;hl- Gefrierkombi</button>
-<button class='filter-btn' onclick="filterGroup('Party Cooler', this)">Party Cooler</button>
-<button class='filter-btn' onclick="filterGroup('Weinschrank', this)">Weinschrank</button>
-
-
-       <div class="search-box">
-
+<div class="search-box">
     <div class="search-wrapper">
 
         <input
@@ -404,15 +391,27 @@ body {
             placeholder="Artikel suchen..."
             onkeyup="filterProducts()">
 
-       <span id="clearSearch" class="clear-search" onclick="clearSearch()">
-      &times;
-     </span>
+        <span id="clearSearch"
+              class="clear-search"
+              onclick="clearSearch()">&times;</span>
 
     </div>
+</div>
+
+<div class="filterbar">
+    <button class="filter-btn active" onclick="filterGroup('all', this)">Alle</button>
+    <button class='filter-btn' onclick="filterGroup('Eiswürfelmaschine', this)">Eisw&#252;rfelmaschine</button>
+<button class='filter-btn' onclick="filterGroup('Foodcenter', this)">Foodcenter</button>
+<button class='filter-btn' onclick="filterGroup('Gefrierschrank', this)">Gefrierschrank</button>
+<button class='filter-btn' onclick="filterGroup('Gefriertruhe', this)">Gefriertruhe</button>
+<button class='filter-btn' onclick="filterGroup('Getränkekühlschrank', this)">Getr&#228;nkek&#252;hlschrank</button>
+<button class='filter-btn' onclick="filterGroup('Kühl- Gefrierkombi', this)">K&#252;hl- Gefrierkombi</button>
+<button class='filter-btn' onclick="filterGroup('Party Cooler', this)">Party Cooler</button>
+<button class='filter-btn' onclick="filterGroup('Weinschrank', this)">Weinschrank</button>
 
 </div>
 
-</div>
+
 
 <div id="noResults" class="no-results">
     Keine passenden Produkte gefunden.
